@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 2nd Anniversary</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-pink: #ff758c;
+            --secondary-pink: #ff7eb3;
+            --text-color: #a02d4d;
+            --card-bg: rgba(255, 255, 255, 0.6);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Prompt', sans-serif;
+            background: linear-gradient(135deg, #ffe9f0 0%, #ffc1d6 100%);
+            color: var(--text-color);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Heart Animation */
+        .hearts-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 20px;
+            color: var(--primary-pink);
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            to { transform: translateY(100vh) rotate(360deg); }
+        }
+
+        section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        /* Section 1: Hero */
+        .hero h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4rem;
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
+
+        .hero p { font-size: 1.5rem; font-style: italic; opacity: 0.8; }
+
+        /* Section 2: Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .stat-card h2 { font-size: 3rem; margin: 0; color: #fff; text-shadow: 2px 2px 4px rgba(0,0,0,0.1); }
+
+        /* Section 3: Reasons */
+        .reason-card {
+            background: #fff;
+            margin: 10px 0;
+            padding: 20px;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .reason-card:hover { transform: scale(1.05); }
+
+        /* Section 4: Letter */
+        .letter-box {
+            background: #fff;
+            padding: 40px;
+            max-width: 600px;
+            border-radius: 30px;
+            line-height: 1.8;
+            text-align: left;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Section 5: Timeline */
+        .timeline-item {
+            background: #fff;
+            margin: 15px;
+            padding: 20px;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 15px;
+            text-align: left;
+            border-left: 5px solid var(--primary-pink);
+        }
+
+        .date { color: var(--primary-pink); font-weight: bold; }
+
+        .arrow-down {
+            font-size: 2rem;
+            margin-top: 20px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-10px);}
+            60% {transform: translateY(-5px);}
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hearts-container" id="hearts"></div>
+
+    <!-- Page 1 -->
+    <section class="hero">
+        <div style="font-size: 50px;">💖✨</div>
+        <h1>Happy 2nd Anniversary</h1>
+        <p>To the love of my life 💖</p>
+        <p>"Every moment with you is a treasure"</p>
+        <div class="arrow-down">↓</div>
+    </section>
+
+    <!-- Page 2 -->
+    <section>
+        <h1 style="font-family: 'Dancing Script';">Our Time Together 💕</h1>
+        <div class="stats-grid">
+            <div class="stat-card" style="background: #ff8fa3;">
+                <span>📅</span>
+                <h2>730ฅ</h2>
+                <p>Days Together</p>
+            </div>
+            <div class="stat-card" style="background: #ff758c;">
+                <span>⏰</span>
+                <h2>17,542</h2>
+                <p>Hours of Love</p>
+            </div>
+            <div class="stat-card" style="background: #ff4d6d;">
+                <span>🎊</span>
+                <h2>2</h2>
+                <p>Years Amazing</p>
+            </div>
+            <div class="stat-card" style="background: #c9184a;">
+                <span>💞</span>
+                <h2>∞</h2>
+                <p>More to Come</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page 3 -->
+    <section>
+        <h1 style="font-family: 'Dancing Script';">Reasons Why I Love You 💕</h1>
+        <p>And there are thousands more...</p>
+        <div class="reason-card">💖 Your beautiful smile that lights up my world</div>
+        <div class="reason-card">💖 Your kind heart and gentle soul</div>
+        <div class="reason-card">💖 The way you laugh at my terrible jokes</div>
+    </section>
+
+    <!-- Page 4 -->
+    <section>
+        <div style="font-size: 50px;">💌</div>
+        <h1 style="font-family: 'Dancing Script';">A Letter to You</h1>
+        <div class="letter-box">
+            <p>My love,</p>
+            <p>สองปีที่ผ่านมาคือช่วงเวลาที่มีความสุขที่สุดดดดดดด ขอบคุณที่เป็นทั้งแฟนที่ดี และเป็นกำลังใจที่สำคัญที่สุดในทุกๆๆๆวันเยย</p>
+            <p>ขอบคุณที่อดทนกันมาตลอดนะจ้ะถึงชั้นจะชอบกวนเสมอออ ชั้นจะรักและดูแลเอ้งงงงงให้ดีขึ้นในทุกปีเรย</p>
+            <p>รักเธอที่สุดดด</p>
+        </div>
+    </section>
+
+    <!-- Page 5 -->
+    <section>
+        <h1 style="font-family: 'Dancing Script';">Our Journey Together 💕</h1>
+        <div class="timeline-item">
+            <div class="date">5 May 2024</div>
+            <h3>The Beginning</h3>
+            <p>วันแรกที่เราเป็นแฟนกานนนนนนนนน...</p>
+        </div>
+        <div class="timeline-item">
+            <div class="date">6 may 2024</div>
+            <h3>First Date</h3>
+            <p>ปรับพื้นฐานครั้งนิ้ พี่รักแฟนเสม่อ</p>
+        </div>
+        <div class="timeline-item">
+            <div class="date">INfinity</div>
+            <h3> "I Love You"</h3>
+            <p>ช้านร้ากแฟนนนนน</p>
+        </div>
+    </section>
+
+    <script>
+        // Create falling hearts
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '💖';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 3 + 2 + 's';
+            heart.style.opacity = Math.random();
+            document.getElementById('hearts').appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+
+        setInterval(createHeart, 300);
+    </script>
+</body>
+</html>
